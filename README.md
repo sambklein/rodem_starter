@@ -1,5 +1,18 @@
 # The RODEM HEP project starter
 
+## Using this template
+This repository defines a cookiecutter template for quickly building new base repositories.
+To use this you first need to run 
+```
+pip install cookiecutter
+```
+On baobab you will need to do this in a virtualenv.
+You can then run
+```
+cookiecutter git@github.com:sambklein/rodem_starter.git
+```
+Follow the prompts to create your new project.
+
 ## Introduction
 
 The code in this repository demonstrates best practice when structuring a new project in the RODEM group.
