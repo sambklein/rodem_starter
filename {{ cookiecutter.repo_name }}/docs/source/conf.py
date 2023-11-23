@@ -19,14 +19,12 @@
 #
 import re
 
-from kedro.framework.cli.utils import find_stylesheets
-
 from {{ cookiecutter.python_package }} import __version__ as release
 
 # -- Project information -----------------------------------------------------
 
 project = "{{ cookiecutter.python_package }}"
-author = "Kedro"
+author = "RODEM"
 
 # The short X.Y version.
 version = re.match(r"^([0-9]+\.[0-9]+).*", release).group(1)
@@ -148,7 +146,6 @@ latex_documents = [
         master_doc,
         "{{ cookiecutter.python_package }}.tex",
         "{{ cookiecutter.python_package }} Documentation",
-        "Kedro",
         "manual",
     )
 ]
@@ -218,7 +215,4 @@ def skip(app, what, name, obj, skip, options):
 def setup(app):
     app.connect("autodoc-process-docstring", autodoc_process_docstring)
     app.connect("autodoc-skip-member", skip)
-    # add Kedro stylesheets
-    for stylesheet in find_stylesheets():
-        app.add_css_file(stylesheet)
     # enable rendering RST tables in Markdown

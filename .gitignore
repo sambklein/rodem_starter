@@ -1,5 +1,5 @@
 ##########################
-# KEDRO PROJECT
+# RODEM PROJECT
 
 # ignore all local configuration
 conf/local/**
